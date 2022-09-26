@@ -6,6 +6,7 @@ const geocodeService = require('./util/mapbox-geocode.js');
 const forecastService = require('./util/forecast-weather.js');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 //Define path for Epxress Config
 const publicDirectoryPath = path.join(__dirname, '../public'); //sets up path to public folder
@@ -109,6 +110,6 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(5500, () => {
-    console.log("CORS-enabled server is up on port 5500");
+app.listen(port, () => {
+    console.log("CORS-enabled server is up on port " + port);
 });
