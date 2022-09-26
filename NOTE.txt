@@ -1,0 +1,5 @@
+Weather App Hosted on Heroku
+Link: https://segun-webserved-weather-app.herokuapp.com/
+
+
+Application codebase pushed to Heroku and Github
