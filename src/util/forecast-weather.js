@@ -12,7 +12,8 @@ const forecastWeather = ( { latitude: lat, longitude: long }, callback) => {
         } else if(response.body.error) {
             callback('Unable to find location. Try another set of coordinates', undefined);
         } else {
-            callback(undefined, `${ body.current.weather_descriptions[0] } at the moment. Temperature is currently ${body.current.temperature} celsius. Apparent temperature is ${body.current.feelslike} celsius`);
+            callback(undefined, `${ body.current.weather_descriptions[0] } at the moment. Temperature is currently ${body.current.temperature} celsius. Apparent temperature is ${body.current.feelslike} celsius and wind direction is ${body.current.wind_dir}`);
+            console.log(body.current);
         }
     });
 }
